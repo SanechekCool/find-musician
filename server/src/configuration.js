@@ -1,3 +1,3 @@
 module.exports = {
-    JWT_SECRET: 'authentication'
+    JWT_SECRET: process.env.JWT_SECRET || 'authentication'
 }
