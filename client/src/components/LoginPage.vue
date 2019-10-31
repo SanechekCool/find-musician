@@ -68,6 +68,11 @@ export default {
 				this.$router.push("/")
 			})
 		}
+	},
+	created(){
+		if (localStorage.getItem("token") != undefined){
+			this.$router.push("/")
+		}
 	}
 }
 </script>

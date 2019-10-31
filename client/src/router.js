@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import LoginPage from './components/LoginPage.vue'
 import RegisterPage from './components/RegisterPage.vue'
 import Home from './components/Home.vue'
-
+import Profile from './components/Profile.vue'
 
 Vue.use(Router)
 
@@ -23,6 +23,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
-    }
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile
+    },
   ]
 })

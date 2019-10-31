@@ -30,7 +30,7 @@ async function signUp(req, res, next){
     res.status(200).json({ token })
 }
 
-async function signIn(req, res, next){
+function signIn(req, res, next){
     const token = signWithToken(req.user);
 
     res.status(200).json({ token });
@@ -38,7 +38,7 @@ async function signIn(req, res, next){
     console.log("successful login!");
 }
 
-async function getInfo(req, res, next){
+ function getInfo(req, res, next){
     console.log(req.user);
 
     const { username, email, photoUrl } = req.user;

@@ -15,7 +15,12 @@ new Vue({
     domain: 'http://localhost:5000'
   }),
   created(){
-    
+    if (localStorage.getItem("token") != undefined) {
+			store.dispatch("GET_INFO", localStorage.getItem("token"))
+		}
+		else {
+			router.push("/login")
+		}
   },
   render: h => h(App)
 }).$mount('#app')
