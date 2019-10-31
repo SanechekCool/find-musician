@@ -3,7 +3,10 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/authentication", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/authentication", { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 const app = express();
 
